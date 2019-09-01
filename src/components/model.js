@@ -144,21 +144,25 @@ class Model {
         // Get the documents collection
         var collection = db.collection(modelName)
 
-        if(options.hasOwnProperty('find') && options.find.hasOwnProperty('_id')) {
-          let objectId = new ObjectId(options.find._id)
+        if(options.hasOwnProperty("data") && options.data.hasOwnProperty("_id")) {
+          let objectId = new ObjectId(options.data._id)
           options.find = {
             '$or': [
               // Allow for both string and object forms
               { _id: objectId },
-              { _id: options.find._id }
+              { _id: options.data._id }
             ]
           }
 
+
           // Delete _id in the data (othewise this will crash)
-          if(options.data.hasOwnProperty('_id')) {
+          if(options.data.hasOwnProperty("_id")) {
             delete options.data._id
           }
         }
+
+        console.log(options)
+
         collection.update(options.find, options.data, (err, data) => {
           callback(data)
         })
