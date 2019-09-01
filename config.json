@@ -1,0 +1,12 @@
+{
+  "dev": {
+    "mongoUrl": "mongodb://mongo.container:27017/",
+    "mongoDatabase": "pc",
+    "port": "4003",
+    "domain": "localhost",
+    "basePath": "/",
+    "pagination:" : {
+      "itemsPerPage": 10
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+    "palette": {
+        "darkGold": "#d7a800",
+        "lightGold": "#ebb202",
+        "lightPurple": "#8d55d0",
+        "darkPurple": "#403152",
+        "green": "#77933b",
+        "darkBlue": "#376092",
+        "lightBlue": "#2a80d6",
+        "orange": "#ff4500",
+        "red": "#ac080f"
+    },
+    "objects": [
+        {
+            "id": "UI",
+            "label": "UI",
+            "image": "images/48/mobile.png",
+            "color": "lightGold",
+            "relationships": [
+                {
+                    "to": "API",
+                    "dir": "forward"
+                }
+            ]
+        },
+        {
+            "id": "DataStreamingService",
+            "label": "<table border=\"0\"><tr><td align=\"left\">Kafka</td></tr><tr><td align=\"left\">Data Streaming Service</td></tr></table>",
+            "image": "images/48/file-text-o.png",
+            "color": "red"
+        },
+        {
+            "id": "API",
+            "label": "Prepared Connector API",
+            "image": "images/48/plug.png",
+            "color": "lightPurple",
+            "relationships": [
+                {
+                    "to": "Mongo",
+                    "dir": "forward"
+                },
+                {
+                    "to": "DataStreamingService",
+                    "dir": "both"
+                }
+            ]
+        },
+        {
+            "id": "Mongo",
+            "label": "Mongo",
+            "image": "images/48/database.png",
+            "color": "lightPurple"
+        }
+    ]
+}

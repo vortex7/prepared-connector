@@ -1,0 +1,40 @@
+digraph {
+  rankdir=TB;
+  {
+    UI [shape=box, style="rounded", color="#ebb202", fontname="helvetica", label=<
+      <table border="0">
+        <tr>
+          <td><img src="images/48/mobile.png"/></td>
+          <td>UI</td>
+        </tr>
+      </table>
+    >]
+    DataStreamingService [shape=box, style="rounded", color="#ac080f", fontname="helvetica", label=<
+      <table border="0">
+        <tr>
+          <td><img src="images/48/file-text-o.png"/></td>
+          <td><table border="0"><tr><td align="left">Kafka</td></tr><tr><td align="left">Data Streaming Service</td></tr></table></td>
+        </tr>
+      </table>
+    >]
+    API [shape=box, style="rounded", color="#8d55d0", fontname="helvetica", label=<
+      <table border="0">
+        <tr>
+          <td><img src="images/48/plug.png"/></td>
+          <td>Prepared Connector API</td>
+        </tr>
+      </table>
+    >]
+    Mongo [shape=box, style="rounded", color="#8d55d0", fontname="helvetica", label=<
+      <table border="0">
+        <tr>
+          <td><img src="images/48/database.png"/></td>
+          <td>Mongo</td>
+        </tr>
+      </table>
+    >]
+    UI -> API [dir=forward, color="black"]
+    API -> Mongo [dir=forward, color="black"]
+    API -> DataStreamingService [dir=both, color="black"]
+  }
+}

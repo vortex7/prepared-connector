@@ -1,0 +1,15 @@
+{
+    "name": "prepared-connector",
+    "version": "0.1.0",
+    "description": "Prepared Connector",
+    "title": "prepared-connector",
+    "url" : "",
+    "header": {
+         "title": "overview",
+         "filename": "presentations/header.md"
+    },
+    "template": {
+        "withCompare": false,
+        "withGenerator": true
+    }
+}
