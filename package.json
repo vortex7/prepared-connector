@@ -1,0 +1,26 @@
+{
+  "name": "prepared-connector",
+  "version": "1.0.0",
+  "description": "API automation framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vortex7/prepared-connector.git"
+  },
+  "keywords": [
+    "API",
+    "Automation"
+  ],
+  "author": "vortex7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vortex7/prepared-connector/issues"
+  },
+  "homepage": "https://github.com/vortex7/prepared-connector#readme",
+  "dependencies": {
+    "mongodb": "^3.3.2"
+  }
+}
