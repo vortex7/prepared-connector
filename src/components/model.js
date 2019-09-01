@@ -13,7 +13,7 @@ class Model {
       let db = client.db(process.env.mongoDatabase)
 
       let modelName = this.options.modelName
-      let options = this.options
+      let options = this.options.data
 
       try {
         // Get the documents collection

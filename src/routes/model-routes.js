@@ -9,9 +9,11 @@ class ModelRoutes {
     //  list
     router.post('/list/:modelName', (request, response) => {
       let modelName = request.params.modelName
-      let options = request.body
+      let data = request.body
 
+      let options = {}
       options.modelName = modelName
+      options.data = data
 
       let model = new Model(options)
 
@@ -23,14 +25,16 @@ class ModelRoutes {
     //  create
     router.post('/create/:modelName', (request, response) => {
       let modelName = request.params.modelName
-      let options = request.body
+      let data = request.body
 
+      let options = {}
       options.modelName = modelName
+      options.data = data
 
       let model = new Model(options)
 
-      model.create((data) => {
-        response.json(data)
+      model.create((resultData) => {
+        response.json(resultData)
       })
 
     })
@@ -38,28 +42,32 @@ class ModelRoutes {
     //  update
     router.post('/update/:modelName', (request, response) => {
       let modelName = request.params.modelName
-      let options = request.body
+      let data = request.body
 
+      let options = {}
       options.modelName = modelName
+      options.data = data
 
       let model = new Model(options)
 
-      model.update((data) => {
-        response.json(data)
+      model.update((resultData) => {
+        response.json(resultData)
       })
     })
 
     //  delete
     router.post('/delete/:modelName', (request, response) => {
       let modelName = request.params.modelName
-      let options = request.body
+      let data = request.body
 
+      let options = {}
       options.modelName = modelName
+      options.data = data
 
       let model = new Model(options)
 
-      model.delete((data) => {
-        response.json(data)
+      model.delete((resultData) => {
+        response.json(resultData)
       })
     })
   }
