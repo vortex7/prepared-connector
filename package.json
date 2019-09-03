@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vortex7/prepared-connector/issues"
   },
-  "homepage": "https://github.com/vortex7/prepared-connector#readme"
+  "homepage": "https://github.com/vortex7/prepared-connector#readme",
+  "dependencies": {
+    "mongodb": "^3.3.2"
+  }
 }
