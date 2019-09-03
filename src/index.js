@@ -1,3 +1,4 @@
 const Model = require("./components/model.js")
+const ModelRoutes = require("./routes/model-routes.js")
 
-module.exports = { Model }
+module.exports = { Model, ModelRoutes }
