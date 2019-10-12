@@ -9,7 +9,7 @@ class Model {
 
   list(callback) {
     // DB Connection
-    mongodb.connect(process.env.mongoUrl, { useNewUrlParser: true }).then((client) => {
+    mongodb.connect(process.env.mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true }).then((client) => {
       let db = client.db(process.env.mongoDatabase)
 
       let modelName = this.options.modelName
@@ -104,7 +104,7 @@ class Model {
 
   create(callback) {
     // DB Connection
-    mongodb.connect(process.env.mongoUrl, { useNewUrlParser: true }).then((client) => {
+    mongodb.connect(process.env.mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true }).then((client) => {
       let db = client.db(process.env.mongoDatabase)
 
       try {
@@ -137,7 +137,7 @@ class Model {
     let options = this.options
 
     // DB Connection
-    mongodb.connect(process.env.mongoUrl, { useNewUrlParser: true }).then((client) => {
+    mongodb.connect(process.env.mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true }).then((client) => {
       let db = client.db(process.env.mongoDatabase)
 
       try {
@@ -189,7 +189,7 @@ class Model {
     let options = this.options
 
     // DB Connection
-    mongodb.connect(process.env.mongoUrl, { useNewUrlParser: true }).then((client) => {
+    mongodb.connect(process.env.mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true }).then((client) => {
       let db = client.db(process.env.mongoDatabase)
 
       try {

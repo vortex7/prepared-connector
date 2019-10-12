@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vortex7/prepared-connector#readme",
   "dependencies": {
+    "@scoutsdk/server-sdk": "^0.7.0",
     "mongodb": "^3.3.2"
   }
 }
